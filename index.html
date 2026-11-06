@@ -1,0 +1,71 @@
+<!doctype html><html lang="id"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SMK Wisudha Karya – Peluang Luar Negeri</title>
+<style>
+:root{--bg:#f6f7fb;--fg:#1b2130;--card:#fff;--ac:#1d5fd1;--mu:#5b6478;--bd:#dfe3ee}
+@media(prefers-color-scheme:dark){:root{--bg:#10141f;--fg:#e8ebf4;--card:#1a2030;--ac:#6ea0ff;--mu:#9aa4bb;--bd:#2b3347}}
+*{box-sizing:border-box}body{margin:0;font:16px/1.5 system-ui,sans-serif;background:var(--bg);color:var(--fg)}
+header{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:14px 20px;background:var(--ac);color:#fff}
+header h1{font-size:1.1rem;margin:0}header button{background:#fff;color:#1d5fd1;border:0;border-radius:6px;padding:6px 12px;font-weight:700;cursor:pointer}
+main{max-width:820px;margin:0 auto;padding:20px}
+form,.c{background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:16px}
+label,fieldset{display:block;margin:0 0 12px;border:0;padding:0}legend,label>span{font-weight:600;display:block;margin-bottom:4px}
+select{width:100%;padding:9px;font-size:1rem;border-radius:8px;border:1px solid var(--bd);background:var(--bg);color:var(--fg)}
+.o{display:inline-flex;gap:6px;margin:0 14px 6px 0;font-weight:400}.o span{font-weight:400;margin:0}
+form>button,.pr{background:var(--ac);color:#fff;border:0;border-radius:8px;padding:11px 20px;font-size:1rem;font-weight:700;cursor:pointer}
+h2{margin:28px 0 10px;font-size:1.2rem}.c{display:flex;gap:14px;margin-bottom:12px}
+.im{flex:0 0 130px;min-height:130px;border-radius:8px;background:#c9d4ea center/cover}
+h3{margin:0}.r{color:var(--ac);font-size:.85rem;margin:2px 0 6px;font-weight:600}.c p{margin:4px 0}.c ul{padding-left:18px;margin:6px 0;font-size:.92rem}
+.c a{color:var(--ac);font-weight:700}small,footer{color:var(--mu)}footer{padding:20px;text-align:center;font-size:.85rem}
+@media(max-width:560px){.c{flex-direction:column}.im{flex-basis:140px}}
+@media print{header button,form,.pr{display:none}}
+</style></head><body>
+<header><h1 data-k="title"></h1><button id="lg">EN</button></header>
+<main><p data-k="intro"></p>
+<form id="f"><label><span data-k="age"></span><select id="age"></select></label>
+<label><span data-k="grade"></span><select id="grade"></select></label>
+<label><span data-k="major"></span><select id="major"></select></label>
+<fieldset><legend data-k="types"></legend><div id="types"></div></fieldset>
+<label class="o"><input type="checkbox" id="fund"><span data-k="fund"></span></label><br><button data-k="go"></button></form>
+<div id="out"></div></main><footer data-k="foot"></footer>
+<script>
+let L=0;const $=s=>document.querySelector(s),t=a=>a[L];
+const U={title:['Peluang Belajar & Kerja ke Luar Negeri','Study & Work Abroad Opportunities'],
+intro:['Isi data kamu, lalu lihat program luar negeri yang paling cocok untukmu.','Fill in your details to see the programs that fit you best.'],
+age:['Usia','Age'],grade:['Kelas','Grade'],major:['Jurusan','Major'],types:['Yang kamu minati','What interests you'],
+fund:['Saya butuh program yang didanai','I need a funded program'],go:['Tampilkan pilihanku','Show my options'],
+now:['Cocok untuk sekarang','Good fit right now'],later:['Rencanakan untuk nanti','Plan for later'],none:['Belum ada yang cocok. Coba ubah pilihanmu.','No matches yet. Try changing your choices.'],
+loc:['Lokasi','Location'],fl:['Pendanaan','Funding'],dur:['Durasi','Duration'],op:['Pendaftaran dibuka','Applications open'],cl:['Pendaftaran ditutup','Applications close'],
+chk:['Cek situs resmi','Check official site'],visit:['Kunjungi situs program','Visit program website'],print:['Cetak / simpan PDF','Print / save PDF'],
+foot:['Tanggal dan syarat bisa berubah setiap tahun. Selalu cek situs resmi program sebelum mendaftar.','Dates and requirements change every year. Always check the official site before applying.'],
+F:[['Tidak didanai','Not funded'],['Sebagian / bervariasi','Partial / varies'],['Didanai penuh','Fully funded'],['Layanan gratis','Free service'],['Digaji','Paid']],
+wm:['Sesuai jurusanmu','Fits your major'],wt:['Sesuai minatmu','Matches your interest'],wf:['Didanai','Funded']};
+const M=[['nav',['Nautika / Pelayaran (awak kapal)','Nautical / Maritime crew']],['auto',['Teknik Otomotif','Automotive Engineering']],['mech',['Teknik Mesin','Mechanical Engineering']],['elec',['Teknik Listrik','Electrical Engineering']],['electr',['Teknik Elektronika','Electronics Engineering']],['marine',['Teknik Permesinan Kapal','Marine Engineering']]];
+const T=[['hs',['SMA di luar negeri','High school abroad']],['college',['Kuliah di luar negeri (S1/S2)','College abroad (undergrad/grad)']],['work',['Magang, pelatihan & kerja','Internship, apprenticeship & work']]];
+function fill(){document.documentElement.lang=['id','en'][L];$('#lg').textContent=['EN','ID'][L];
+document.querySelectorAll('[data-k]').forEach(e=>e.textContent=U[e.dataset.k][L]);
+const k=(id,h,v)=>{const s=$(id),p=s.value;s.innerHTML=h;if(p)s.value=p};
+k('#age',[15,16,17,18,19,20].map(a=>`<option>${a}</option>`).join(''));
+k('#grade',[10,11,12].map(a=>`<option>${a}</option>`).join(''));
+k('#major',M.map(m=>`<option value="${m[0]}">${t(m[1])}</option>`).join(''));
+const c=[...document.querySelectorAll('#types input:checked')].map(x=>x.value);
+$('#types').innerHTML=T.map(x=>`<label class="o"><input type="checkbox" value="${x[0]}" ${c.includes(x[0])?'checked':''}><span>${t(x[1])}</span></label>`).join('');
+if($('#out').innerHTML)go()}
+function card(p,r){const d=(v)=>v||t(U.chk);return `<article class="c"><div class="im" style="background-image:url(img/${p.id}.jpg)"></div><div><h3>${p.n}</h3><p class="r">${r.join(' · ')}</p><p>${t(p.s)}</p><ul>
+<li><b>${t(U.loc)}:</b> ${t(p.loc)}</li><li><b>${t(U.fl)}:</b> ${t(U.F[p.f])}</li><li><b>${t(U.dur)}:</b> ${t(p.d)}</li>
+<li><b>${t(U.op)}:</b> ${d(p.op)}</li><li><b>${t(U.cl)}:</b> ${d(p.cl)}</li></ul><a href="${p.u}" target="_blank" rel="noopener">${t(U.visit)} →</a></div></article>`}
+function go(e){if(e)e.preventDefault();
+const age=+$('#age').value,gr=+$('#grade').value,mj=$('#major').value,ty=[...document.querySelectorAll('#types input:checked')].map(x=>x.value),fd=$('#fund').checked,now=[],later=[];
+PROGRAMS.forEach(p=>{let ok;
+if(p.t=='hs'){if(!p.g.includes(gr)||age<p.a[0]||age>p.a[1])return;ok=1}
+else ok=p.o||(gr==12&&age>=p.a[0]&&(!p.a[1]||age<=p.a[1]));
+if(p.m!='*'&&!p.m.includes(mj))return;if(ty.length&&!ty.includes(p.t))return;
+const r=[];let s=p.h?1:0;
+if(p.m!='*'){s+=3;r.push(t(U.wm))}else s++;
+if(ty.includes(p.t)){s+=2;r.push(t(U.wt))}
+if(fd&&p.f>1){s+=2;r.push(t(U.wf))}
+(ok?now:later).push([s,p,r])});
+const sec=(h,a)=>a.length?`<h2>${t(h)}</h2>`+a.sort((x,y)=>y[0]-x[0]).map(x=>card(x[1],x[2])).join(''):'';
+$('#out').innerHTML=(now.length+later.length?sec(U.now,now)+sec(U.later,later)+`<button class="pr" onclick="print()">${t(U.print)}</button>`:`<p>${t(U.none)}</p>`)}
+$('#f').onsubmit=go;$('#lg').onclick=()=>{L=1-L;fill()};fill();
+</script><script src="programs.js"></script>
+<script>fill()</script></body></html>
