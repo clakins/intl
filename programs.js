@@ -1,6 +1,6 @@
 // ONE ENTRY PER PROGRAM. To add one: copy an entry, edit, save. Image goes in img/<id>.jpg
 // t: hs | college | work    g: eligible grades (hs only)    a: [min age, max age]    o:1 = open to any student
-// m: '*' or list of majors: nav auto mech elec electr marine    f: 0 no, 1 partial/varies, 2 fully funded, 3 free service, 4 paid
+// m: '*' or list of majors: nkn tkn mesin oto tei titl    f: 0 no, 1 partial/varies, 2 fully funded, 3 free service, 4 paid
 // op/cl: application opens/closes (null = "check official site")    h:1 = featured in the presentation
 const V=['Bervariasi','Varies'],YR=['1 tahun ajaran','1 school year'],US=['Amerika Serikat','United States'],JP=['Jepang','Japan'],CT=['Kontrak kerja','Work contract'];
 const PROGRAMS=[
@@ -18,18 +18,44 @@ const PROGRAMS=[
  s:['Kuliah S1 penuh di NUS. Ada kewajiban kerja di Singapura setelah lulus.','Full undergraduate degree at NUS. Includes a work obligation in Singapore after graduating.']},
 {id:'eusa',t:'college',o:1,a:[14],m:'*',f:3,n:'EducationUSA',loc:['Online / Jakarta','Online / Jakarta'],d:['Sesi konsultasi','Advising sessions'],op:null,cl:null,u:'https://educationusa.state.gov',
  s:['Konsultasi gratis soal kuliah di AS: pendaftaran, bantuan dana, visa. Titik awal yang bagus.','Free advising on U.S. study: applications, financial aid, visas. A great place to start.']},
-{id:'aus',t:'college',a:[21],m:['nav','marine','mech','elec','electr'],f:2,h:1,n:'Australia Awards',loc:['Australia','Australia'],d:['1–2 tahun (S2)','1–2 years (master’s)'],op:null,cl:'28 Apr 2027',u:'https://australiaawardsindonesia.org',
+{id:'aus',t:'college',a:[21],m:['nkn','tkn','mesin','titl','tei'],f:2,h:1,n:'Australia Awards',loc:['Australia','Australia'],d:['1–2 tahun (S2)','1–2 years (master’s)'],op:null,cl:'28 Apr 2027',u:'https://australiaawardsindonesia.org',
  s:['Beasiswa S2/S3 di Australia (perlu gelar S1 dulu). Prioritas termasuk maritim dan manufaktur.','Master’s/PhD scholarships in Australia (bachelor’s needed first). Priorities include maritime and manufacturing.']},
-{id:'ssw',t:'work',a:[18],m:['mech','auto','elec','electr','marine'],f:1,h:1,n:'Japan SSW',loc:JP,d:CT,op:null,cl:null,u:'https://www.isa.go.jp/en/',
+{id:'ssw',t:'work',a:[18],m:['mesin','oto','titl','tei','tkn'],f:1,h:1,n:'Japan SSW',loc:JP,d:CT,op:null,cl:null,u:'https://www.isa.go.jp/en/',
  s:['Visa pekerja terampil khusus di Jepang. Perlu tes bahasa Jepang dan tes keterampilan.','Specified Skilled Worker visa for Japan. Needs Japanese-language and skills tests.']},
-{id:'ausb',t:'work',a:[18],m:['mech','auto','elec','electr'],f:4,h:1,n:'German Ausbildung',loc:['Jerman','Germany'],d:['2–3,5 tahun','2–3.5 years'],op:null,cl:null,u:'https://www.make-it-in-germany.com',
+{id:'ausb',t:'work',a:[18],m:['mesin','oto','titl','tei'],f:4,h:1,n:'German Ausbildung',loc:['Jerman','Germany'],d:['2–3,5 tahun','2–3.5 years'],op:null,cl:null,u:'https://www.make-it-in-germany.com',
  s:['Pelatihan kejuruan berupah di Jerman: kerja plus sekolah. Perlu bahasa Jerman (sekitar B1).','Paid vocational training in Germany: work plus classes. German needed (around B1).']},
-{id:'eps',t:'work',a:[18,39],m:['mech','auto','elec','electr'],f:4,n:'Korea EPS',loc:['Korea Selatan','South Korea'],d:CT,op:null,cl:null,u:'https://kp2mi.go.id',
+{id:'eps',t:'work',a:[18,39],m:['mesin','oto','titl','tei'],f:4,n:'Korea EPS',loc:['Korea Selatan','South Korea'],d:CT,op:null,cl:null,u:'https://kp2mi.go.id',
  s:['Jalur resmi pemerintah ke pemerintah untuk kerja di Korea. Perlu lulus tes EPS-TOPIK.','Official government-to-government route to work in Korea. Requires passing EPS-TOPIK.']},
 {id:'siskop',t:'work',a:[18],m:'*',f:3,n:'SISKOP2MI',loc:['Berbagai negara','Various countries'],d:V,op:null,cl:null,u:'https://siskop2mi.go.id',
  s:['Sistem resmi pemerintah untuk lowongan kerja luar negeri. Jangan bayar calo.','The government’s official system for overseas jobs. Never pay brokers.']},
 {id:'ggl',t:'work',a:[18],m:'*',f:1,h:1,n:'SMK Go Global',loc:['Berbagai negara','Various countries'],d:V,op:null,cl:null,u:'https://kp2mi.go.id',
  s:['Pelatihan bahasa dan keterampilan untuk lulusan SMK sebelum kerja di luar negeri.','Language and skills training for SMK graduates before working abroad.']},
-{id:'stcw',t:'work',a:[18],m:['nav','marine'],f:1,n:'STCW Pathway',loc:['Kapal internasional','International shipping'],d:V,op:null,cl:null,u:'https://www.imo.org',
+{id:'stcw',t:'work',a:[18],m:['nkn','tkn'],f:1,n:'STCW Pathway',loc:['Kapal internasional','International shipping'],d:V,op:null,cl:null,u:'https://www.imo.org',
  s:['Standar internasional pelaut: jalur menjadi awak dek atau kamar mesin di kapal dagang.','International seafarer standard: the route to deck or engine crew on merchant ships.']}
+,{id:'gks',t:'college',a:[17,25],m:'*',f:2,n:'Korean Government Scholarship (GKS)',loc:['Korea Selatan','South Korea'],d:['4 tahun + 1 tahun bahasa','4 years + 1 language year'],op:null,cl:null,u:'https://www.studyinkorea.go.kr',
+ s:['Beasiswa S1 penuh dari pemerintah Korea, termasuk setahun belajar bahasa Korea.','Full undergraduate scholarship from the Korean government, including a year of Korean language study.']},
+{id:'mext',t:'college',a:[17,21],m:'*',f:2,n:'MEXT Japan (S1 & KOSEN)',loc:JP,d:['S1 4 tahun / KOSEN 2 tahun','Undergrad 4 years / KOSEN 2 years'],op:null,cl:null,u:'https://www.studyinjapan.go.jp',
+ s:['Beasiswa pemerintah Jepang untuk S1 atau kampus teknik KOSEN. Diajukan lewat Kedutaan Jepang.','Japanese government scholarship for undergraduate study or KOSEN technical colleges. Apply through the Japanese Embassy.']},
+{id:'csc',t:'college',a:[17,25],m:'*',f:2,n:'Chinese Government Scholarship (CSC)',loc:['Tiongkok','China'],d:['4 tahun (S1)','4 years (undergrad)'],op:null,cl:null,u:'https://www.campuschina.org',
+ s:['Beasiswa S1 penuh dari pemerintah Tiongkok. Banyak jurusan teknik tersedia.','Full undergraduate scholarship from the Chinese government. Many engineering programs available.']},
+{id:'tb',t:'college',a:[17,21],m:'*',f:2,n:'Türkiye Burslari',loc:['Turki','Türkiye'],d:['4 tahun (S1)','4 years (undergrad)'],op:'Jan',cl:'Feb',u:'https://www.turkiyeburslari.gov.tr',
+ s:['Beasiswa penuh pemerintah Turki, termasuk tunjangan hidup dan kursus bahasa Turki.','Full Turkish government scholarship, including a living allowance and Turkish language course.']},
+{id:'yseali',t:'college',a:[18,25],m:'*',f:1,n:'YSEALI (pertukaran singkat)',loc:US,d:['Beberapa pekan','A few weeks'],op:null,cl:null,u:'https://exchanges.state.gov',
+ s:['Pertukaran singkat untuk pemuda Asia Tenggara, biasanya di AS. Cek jenis program dan syaratnya.','Short exchange for Southeast Asian youth, usually in the U.S. Check each program’s type and requirements.']},
+{id:'erasmus',t:'college',a:[21],m:'*',f:2,n:'Erasmus Mundus (S2)',loc:['Eropa','Europe'],d:['1–2 tahun (S2)','1–2 years (master’s)'],op:null,cl:null,u:'https://erasmus-plus.ec.europa.eu',
+ s:['Beasiswa S2 gabungan beberapa universitas Eropa. Perlu gelar S1 dan bahasa Inggris kuat.','Joint master’s scholarship across European universities. Needs a bachelor’s degree and strong English.']},
+{id:'aminef',t:'college',a:[21],m:'*',f:2,n:'Fulbright S2 (AMINEF)',loc:US,d:['1–2 tahun (S2)','1–2 years (master’s)'],op:null,cl:'15 Feb',u:'https://www.aminef.or.id',
+ s:['Beasiswa S2 di AS. Perlu IPK min. 3,0 dan skor bahasa Inggris (mis. IELTS 6,5).','Master’s scholarship in the U.S. Needs GPA 3.0+ and an English score (e.g. IELTS 6.5).']},
+{id:'daad',t:'college',a:[22],m:'*',f:1,n:'DAAD (Jerman)',loc:['Jerman','Germany'],d:V,op:null,cl:null,u:'https://www.daad.id',
+ s:['Kumpulan beasiswa S2/S3 dan riset di Jerman. S2 biasanya minta ±2 tahun pengalaman kerja.','A set of master’s, PhD and research scholarships in Germany. Master’s usually needs about 2 years of work experience.']},
+{id:'aiyep',t:'work',a:[21,25],m:'*',f:1,n:'AIYEP (Indonesia–Australia)',loc:['Australia','Australia'],d:V,op:null,cl:null,u:'https://www.dfat.gov.au',
+ s:['Pertukaran pemuda: budaya, penempatan kerja, dan kepemimpinan. Seleksi lewat Kemenpora.','Youth exchange with cultural immersion, work placements and leadership. Selection through the youth ministry (Kemenpora).']}
+,{id:'wmu',t:'college',a:[22],m:['nkn','tkn'],f:1,n:'World Maritime University (WMU)',loc:['Swedia','Sweden'],d:V,op:null,cl:null,u:'https://www.wmu.se',
+ s:['Universitas maritim IMO di Swedia untuk S2. Ada beasiswa dari lembaga maritim seperti Nippon Foundation.','The IMO’s maritime university in Sweden, for master’s study. Fellowships exist from maritime bodies such as the Nippon Foundation.']},
+{id:'dual',t:'college',a:[17],m:['mesin','oto','tei','titl'],f:4,n:'Germany Dual Study (Duales Studium)',loc:['Jerman','Germany'],d:['3–4 tahun','3–4 years'],op:null,cl:null,u:'https://www.make-it-in-germany.com',
+ s:['Kuliah S1 digabung kerja berupah di perusahaan Jerman. Perlu bahasa Jerman yang kuat (sekitar B2).','A bachelor’s degree combined with paid work at a German company. Needs strong German (around B2).']},
+{id:'taiwan',t:'college',a:[17,25],m:'*',f:2,n:'Taiwan Scholarship (MOFA/ICDF)',loc:['Taiwan','Taiwan'],d:['4 tahun (S1)','4 years (undergrad)'],op:null,cl:null,u:'https://www.studyintaiwan.org',
+ s:['Beasiswa pemerintah Taiwan untuk S1. Taiwan kuat di bidang elektronika dan teknik.','Taiwanese government scholarship for undergraduate study. Taiwan is strong in electronics and engineering.']},
+{id:'magang',t:'work',a:[18],m:['mesin','oto','tei','titl','tkn'],f:4,n:'Japan Internship (Kemnaker)',loc:JP,d:['Kontrak magang','Internship contract'],op:null,cl:null,u:'https://kemnaker.go.id',
+ s:['Jalur pemagangan resmi ke Jepang lewat Kemnaker. Aturannya sedang berubah, jadi cek pengumuman terbaru.','Official internship route to Japan through the manpower ministry. Rules are changing, so check the latest announcements.']}
 ];

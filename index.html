@@ -1,32 +1,43 @@
 <!doctype html><html lang="id"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>SMK Wisudha Karya – Peluang Luar Negeri</title>
 <style>
-:root{--bg:#f6f7fb;--fg:#1b2130;--card:#fff;--ac:#1d5fd1;--mu:#5b6478;--bd:#dfe3ee}
-@media(prefers-color-scheme:dark){:root{--bg:#10141f;--fg:#e8ebf4;--card:#1a2030;--ac:#6ea0ff;--mu:#9aa4bb;--bd:#2b3347}}
-*{box-sizing:border-box}body{margin:0;font:16px/1.5 system-ui,sans-serif;background:var(--bg);color:var(--fg)}
-header{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:14px 20px;background:var(--ac);color:#fff}
-header h1{font-size:1.1rem;margin:0}header button{background:#fff;color:#1d5fd1;border:0;border-radius:6px;padding:6px 12px;font-weight:700;cursor:pointer}
-main{max-width:820px;margin:0 auto;padding:20px}
-form,.c{background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:16px}
-label,fieldset{display:block;margin:0 0 12px;border:0;padding:0}legend,label>span{font-weight:600;display:block;margin-bottom:4px}
-select{width:100%;padding:9px;font-size:1rem;border-radius:8px;border:1px solid var(--bd);background:var(--bg);color:var(--fg)}
-.o{display:inline-flex;gap:6px;margin:0 14px 6px 0;font-weight:400}.o span{font-weight:400;margin:0}
-form>button,.pr{background:var(--ac);color:#fff;border:0;border-radius:8px;padding:11px 20px;font-size:1rem;font-weight:700;cursor:pointer}
-h2{margin:28px 0 10px;font-size:1.2rem}.c{display:flex;gap:14px;margin-bottom:12px}
-.im{flex:0 0 130px;min-height:130px;border-radius:8px;background:#c9d4ea center/cover}
-h3{margin:0}.r{color:var(--ac);font-size:.85rem;margin:2px 0 6px;font-weight:600}.c p{margin:4px 0}.c ul{padding-left:18px;margin:6px 0;font-size:.92rem}
-.c a{color:var(--ac);font-weight:700}small,footer{color:var(--mu)}footer{padding:20px;text-align:center;font-size:.85rem}
-@media(max-width:560px){.c{flex-direction:column}.im{flex-basis:140px}}
-@media print{header button,form,.pr{display:none}}
+:root{--bg:#f4f6fb;--fg:#1a2238;--card:#fff;--ac:#0b5fff;--g:#00a38c;--mu:#5b6478;--bd:#e1e6f1;--sh:0 2px 12px #1a223814}
+@media(prefers-color-scheme:dark){:root{--bg:#0d1220;--fg:#e8ebf4;--card:#171e30;--ac:#6ea0ff;--g:#3ed1b8;--mu:#9aa4bb;--bd:#2a3350;--sh:none}}
+*{box-sizing:border-box}body{margin:0;font:16px/1.55 system-ui,sans-serif;background:var(--bg);color:var(--fg)}
+header{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:30px 22px;background:linear-gradient(120deg,#0b3fa8,#0b9aa8);color:#fff}
+header h1{font-size:1.4rem;margin:0;max-width:640px}header button{background:#ffffff26;color:#fff;border:1px solid #fff9;border-radius:999px;padding:7px 16px;font-weight:700;cursor:pointer}
+main{max-width:860px;margin:0 auto;padding:22px}
+form,.c{background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:18px;box-shadow:var(--sh)}
+form{display:grid;grid-template-columns:1fr 1fr;gap:14px 18px}fieldset{grid-column:1/-1;border:0;padding:0;margin:0}form>br{display:none}
+label>span,legend{font-weight:600;display:block;margin-bottom:5px}
+select{width:100%;padding:10px;font-size:1rem;border-radius:10px;border:1px solid var(--bd);background:var(--bg);color:var(--fg)}
+.o{display:inline-flex;gap:7px;margin:0 8px 8px 0;border:1px solid var(--bd);border-radius:999px;padding:6px 14px;cursor:pointer}.o span{font-weight:400;margin:0}
+.o:has(input:checked){background:var(--ac);border-color:var(--ac);color:#fff}form>.o{grid-column:1/-1;justify-self:start}
+form>button,.pr{grid-column:1/-1;background:var(--ac);color:#fff;border:0;border-radius:10px;padding:12px 22px;font-size:1rem;font-weight:700;cursor:pointer}
+h2{margin:32px 0 8px;font-size:1.25rem}.c{display:flex;gap:16px;margin-bottom:14px;transition:transform .15s}.c:hover{transform:translateY(-2px)}
+.im{flex:0 0 150px;min-height:150px;border-radius:10px;background:linear-gradient(135deg,#9db8ee,#8fd6cc) center/cover}
+h3{margin:0;font-size:1.1rem}.r{color:var(--g);font-size:.85rem;margin:3px 0 6px;font-weight:600}.c p{margin:4px 0}.c ul{padding-left:18px;margin:6px 0;font-size:.92rem}
+.tg{font-size:.72rem;padding:2px 10px;border-radius:999px;background:#0b5fff22;color:var(--ac);margin-left:6px;vertical-align:middle;font-weight:600}.f2,.f3,.f4{background:#00a38c22;color:var(--g)}
+.c a{color:var(--ac);font-weight:700}.rs{padding:14px}.ck{width:20px;height:20px;flex:0 0 20px;margin-top:4px;accent-color:var(--g)}
+small,footer{color:var(--mu)}footer{padding:24px;text-align:center;font-size:.85rem}
+@media(max-width:600px){form{grid-template-columns:1fr}.c{flex-direction:column}.rs{flex-direction:row}.im{flex-basis:150px}}
+@media print{header button,form,.pr,#prep{display:none}}
+.st{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;padding:0;margin:0 0 20px;list-style:none;counter-reset:s}
+.st li{counter-increment:s;background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:12px 14px;font-size:.92rem;box-shadow:var(--sh)}
+.st li:before{content:counter(s);display:inline-grid;place-items:center;width:24px;height:24px;border-radius:50%;background:var(--ac);color:#fff;font-weight:700;margin-right:8px}
+.c[data-t=hs]{border-left:4px solid #f5a623}.c[data-t=college]{border-left:4px solid var(--ac)}.c[data-t=work]{border-left:4px solid var(--g)}
+.bd{background:#f5a62326;color:#b36b00}@media(prefers-color-scheme:dark){.bd{color:#ffc266}}
+.ps{display:none}@media print{.ps{display:block;font-weight:700}.c{box-shadow:none;break-inside:avoid}}
+@media(max-width:600px){.st{grid-template-columns:1fr}}
 </style></head><body>
 <header><h1 data-k="title"></h1><button id="lg">EN</button></header>
-<main><p data-k="intro"></p>
+<main><ol class="st"><li data-k="s1"></li><li data-k="s2"></li><li data-k="s3"></li></ol>
 <form id="f"><label><span data-k="age"></span><select id="age"></select></label>
 <label><span data-k="grade"></span><select id="grade"></select></label>
 <label><span data-k="major"></span><select id="major"></select></label>
 <fieldset><legend data-k="types"></legend><div id="types"></div></fieldset>
 <label class="o"><input type="checkbox" id="fund"><span data-k="fund"></span></label><br><button data-k="go"></button></form>
-<div id="out"></div></main><footer data-k="foot"></footer>
+<div id="out"></div><div id="prep"></div></main><footer data-k="foot"></footer>
 <script>
 let L=0;const $=s=>document.querySelector(s),t=a=>a[L];
 const U={title:['Peluang Belajar & Kerja ke Luar Negeri','Study & Work Abroad Opportunities'],
@@ -36,10 +47,10 @@ fund:['Saya butuh program yang didanai','I need a funded program'],go:['Tampilka
 now:['Cocok untuk sekarang','Good fit right now'],later:['Rencanakan untuk nanti','Plan for later'],none:['Belum ada yang cocok. Coba ubah pilihanmu.','No matches yet. Try changing your choices.'],
 loc:['Lokasi','Location'],fl:['Pendanaan','Funding'],dur:['Durasi','Duration'],op:['Pendaftaran dibuka','Applications open'],cl:['Pendaftaran ditutup','Applications close'],
 chk:['Cek situs resmi','Check official site'],visit:['Kunjungi situs program','Visit program website'],print:['Cetak / simpan PDF','Print / save PDF'],
-foot:['Tanggal dan syarat bisa berubah setiap tahun. Selalu cek situs resmi program sebelum mendaftar.','Dates and requirements change every year. Always check the official site before applying.'],
+prep:['Persiapan: yang bisa kamu lakukan sekarang','Get ready: what you can do now'],prepi:['Centang yang sudah kamu kerjakan. Daftar ini tersimpan di perangkatmu.','Tick what you’ve done. This list is saved on your device.'],yt:['Video tutorial','Tutorial videos'],web:['Situs resmi','Official site'],s1:['Isi usia, kelas, dan jurusanmu.','Enter your age, grade and major.'],s2:['Lihat program yang paling cocok, diurutkan untukmu.','See the programs that fit you best, ranked.'],s3:['Centang langkah persiapan dan kunjungi situs resmi.','Tick off the preparation steps and visit the official sites.'],cs:['Sudah ditutup','Closed'],ci:['Ditutup dalam','Closes in'],hari:['hari','days'],co:['Ditutup','Closes'],oo:['Dibuka','Opens'],foot:['Tanggal dan syarat bisa berubah setiap tahun. Selalu cek situs resmi program sebelum mendaftar.','Dates and requirements change every year. Always check the official site before applying.'],
 F:[['Tidak didanai','Not funded'],['Sebagian / bervariasi','Partial / varies'],['Didanai penuh','Fully funded'],['Layanan gratis','Free service'],['Digaji','Paid']],
 wm:['Sesuai jurusanmu','Fits your major'],wt:['Sesuai minatmu','Matches your interest'],wf:['Didanai','Funded']};
-const M=[['nav',['Nautika / Pelayaran (awak kapal)','Nautical / Maritime crew']],['auto',['Teknik Otomotif','Automotive Engineering']],['mech',['Teknik Mesin','Mechanical Engineering']],['elec',['Teknik Listrik','Electrical Engineering']],['electr',['Teknik Elektronika','Electronics Engineering']],['marine',['Teknik Permesinan Kapal','Marine Engineering']]];
+const M=[['nkn',['NKN – Nautika Kapal Niaga (navigasi & dek)','NKN – Merchant Ship Navigation (deck)']],['tkn',['TKN – Teknika Kapal Niaga (mesin kapal)','TKN – Merchant Ship Engineering (engine room)']],['mesin',['Teknik Mesin (permesinan & manufaktur)','Mechanical Engineering (machining & manufacturing)']],['oto',['Teknik Otomotif (kendaraan ringan)','Automotive Engineering (light vehicles)']],['tei',['Teknik Elektronika (TEI & mekatronika)','Electronics Engineering (industrial electronics & mechatronics)']],['titl',['Teknik Ketenagalistrikan (TITL & smart grid)','Electrical Power Engineering (installation & smart grid)']]];
 const T=[['hs',['SMA di luar negeri','High school abroad']],['college',['Kuliah di luar negeri (S1/S2)','College abroad (undergrad/grad)']],['work',['Magang, pelatihan & kerja','Internship, apprenticeship & work']]];
 function fill(){document.documentElement.lang=['id','en'][L];$('#lg').textContent=['EN','ID'][L];
 document.querySelectorAll('[data-k]').forEach(e=>e.textContent=U[e.dataset.k][L]);
@@ -49,11 +60,14 @@ k('#grade',[10,11,12].map(a=>`<option>${a}</option>`).join(''));
 k('#major',M.map(m=>`<option value="${m[0]}">${t(m[1])}</option>`).join(''));
 const c=[...document.querySelectorAll('#types input:checked')].map(x=>x.value);
 $('#types').innerHTML=T.map(x=>`<label class="o"><input type="checkbox" value="${x[0]}" ${c.includes(x[0])?'checked':''}><span>${t(x[1])}</span></label>`).join('');
-if($('#out').innerHTML)go()}
-function card(p,r){const d=(v)=>v||t(U.chk);return `<article class="c"><div class="im" style="background-image:url(img/${p.id}.jpg)"></div><div><h3>${p.n}</h3><p class="r">${r.join(' · ')}</p><p>${t(p.s)}</p><ul>
+if($('#out').innerHTML)go();else if(self.prep)prep()}
+const MO='JanFebMarAprMayJunJulAugSepOctNovDec';
+function nd(s){const m=/(\d{1,2})?\s*([A-Z][a-z]{2})\s*(\d{4})?/.exec(s||'');if(!m)return;const i=MO.indexOf(m[2]);if(i<0||i%3)return;const mo=i/3,n=new Date(),y=n.getFullYear(),f=(yy)=>m[1]?new Date(yy,mo,+m[1]):new Date(yy,mo+1,0);let d=f(+m[3]||y);if(!m[3]&&d<n)d=f(y+1);return d}
+function bd(p){const c=nd(p.cl),o=nd(p.op);let x='';if(c){const k=Math.ceil((c-new Date())/864e5);x=k<0?t(U.cs):k<=45?`${t(U.ci)} ${k} ${t(U.hari)}`:`${t(U.co)} ${p.cl}`}else if(o)x=`${t(U.oo)} ${p.op}`;return x?`<span class="tg bd">${x}</span>`:''}
+function card(p,r){const d=(v)=>v||t(U.chk);return `<article class="c" data-t="${p.t}"><div class="im" style="background-image:url(img/${p.id}.jpg)"></div><div><h3>${p.n}<span class="tg f${p.f}">${t(U.F[p.f])}</span>${bd(p)}</h3><p class="r">${r.join(' · ')}</p><p>${t(p.s)}</p><ul>
 <li><b>${t(U.loc)}:</b> ${t(p.loc)}</li><li><b>${t(U.fl)}:</b> ${t(U.F[p.f])}</li><li><b>${t(U.dur)}:</b> ${t(p.d)}</li>
 <li><b>${t(U.op)}:</b> ${d(p.op)}</li><li><b>${t(U.cl)}:</b> ${d(p.cl)}</li></ul><a href="${p.u}" target="_blank" rel="noopener">${t(U.visit)} →</a></div></article>`}
-function go(e){if(e)e.preventDefault();
+function go(e){setTimeout(()=>self.prep&&prep());if(e)e.preventDefault();
 const age=+$('#age').value,gr=+$('#grade').value,mj=$('#major').value,ty=[...document.querySelectorAll('#types input:checked')].map(x=>x.value),fd=$('#fund').checked,now=[],later=[];
 PROGRAMS.forEach(p=>{let ok;
 if(p.t=='hs'){if(!p.g.includes(gr)||age<p.a[0]||age>p.a[1])return;ok=1}
@@ -65,7 +79,13 @@ if(ty.includes(p.t)){s+=2;r.push(t(U.wt))}
 if(fd&&p.f>1){s+=2;r.push(t(U.wf))}
 (ok?now:later).push([s,p,r])});
 const sec=(h,a)=>a.length?`<h2>${t(h)}</h2>`+a.sort((x,y)=>y[0]-x[0]).map(x=>card(x[1],x[2])).join(''):'';
-$('#out').innerHTML=(now.length+later.length?sec(U.now,now)+sec(U.later,later)+`<button class="pr" onclick="print()">${t(U.print)}</button>`:`<p>${t(U.none)}</p>`)}
+$('#out').innerHTML=(now.length+later.length?`<p class="ps">SMK Wisudha Karya · ${t(M.find(m=>m[0]==mj)[1])} · ${t(U.grade)} ${gr}</p>`+sec(U.now,now)+sec(U.later,later)+`<button class="pr" onclick="print()">${t(U.print)}</button>`:`<p>${t(U.none)}</p>`)}
 $('#f').onsubmit=go;$('#lg').onclick=()=>{L=1-L;fill()};fill();
 </script><script src="programs.js"></script>
-<script>fill()</script></body></html>
+<script src="resources.js"></script><script>
+const lab=x=>typeof x=='string'?x:t(x);
+function prep(){const ty=[...document.querySelectorAll('#types input:checked')].map(x=>x.value),mj=$('#major').value;let d={};try{d=JSON.parse(localStorage.d||'{}')}catch(e){}
+const a=RES.filter(r=>(!r.for||!ty.length||r.for.some(x=>ty.includes(x)))&&(!r.m||r.m.includes(mj)));
+$('#prep').innerHTML=`<h2>${t(U.prep)}</h2><p><small>${t(U.prepi)}</small></p>`+a.map(r=>`<article class="c rs"><input type="checkbox" class="ck" data-id="${r.id}" ${d[r.id]?'checked':''}><div><h3>${t(r.n)}</h3><p>${t(r.s)}</p><p>${r.l.map(l=>l[0]=='yt'?`<a href="https://www.youtube.com/results?search_query=${encodeURIComponent(t(l[1]))}" target="_blank" rel="noopener">▶ ${t(U.yt)}</a>`:`<a href="${l[1]}" target="_blank" rel="noopener">${lab(l[2]||U.web)} →</a>`).join(' · ')}</p></div></article>`).join('');
+document.querySelectorAll('#prep input').forEach(i=>i.onchange=()=>{d[i.dataset.id]=i.checked;try{localStorage.d=JSON.stringify(d)}catch(e){}})}
+$('#f').addEventListener('change',()=>prep());fill();</script></body></html>
