@@ -70,7 +70,7 @@ if($('#out').innerHTML)go();else if(self.prep)prep();self.dir&&dir()}
 const MO='JanFebMarAprMayJunJulAugSepOctNovDec';
 function nd(s){const m=/(\d{1,2})?\s*([A-Z][a-z]{2})\s*(\d{4})?/.exec(s||'');if(!m)return;const i=MO.indexOf(m[2]);if(i<0||i%3)return;const mo=i/3,n=new Date(),y=n.getFullYear(),f=(yy)=>m[1]?new Date(yy,mo,+m[1]):new Date(yy,mo+1,0);let d=f(+m[3]||y);if(!m[3]&&d<n)d=f(y+1);return d}
 function bd(p){const c=nd(p.cl),o=nd(p.op);let x='';if(c){const k=Math.ceil((c-new Date())/864e5);x=k<0?t(U.cs):k<=45?`${t(U.ci)} ${k} ${t(U.hari)}`:`${t(U.co)} ${p.cl}`}else if(o)x=`${t(U.oo)} ${p.op}`;return x?`<span class="tg bd">${x}</span>`:''}
-function card(p,r){const d=(v)=>v||t(U.chk);return `<article class="c" data-t="${p.t}"><div class="im" style="background-image:url(img/${p.id}.jpg)"></div><div><h3>${p.n}<span class="tg f${p.f}">${t(U.F[p.f])}</span>${bd(p)}</h3><p class="r">${r.join(' · ')}</p><p>${t(p.s)}</p><ul>
+function card(p,r){const d=(v)=>v||t(U.chk);return `<article class="c" data-t="${p.t}"><div class="im" style="background-image:url(img/${p.id}.png),url(img/${p.id}.jpg),linear-gradient(135deg,#9db8ee,#8fd6cc)"></div><div><h3>${p.n}<span class="tg f${p.f}">${t(U.F[p.f])}</span>${bd(p)}</h3><p class="r">${r.join(' · ')}</p><p>${t(p.s)}</p><ul>
 <li><b>${t(U.loc)}:</b> ${t(p.loc)}</li><li><b>${t(U.fl)}:</b> ${t(U.F[p.f])}</li><li><b>${t(U.dur)}:</b> ${t(p.d)}</li>
 <li><b>${t(U.op)}:</b> ${d(p.op)}</li><li><b>${t(U.cl)}:</b> ${d(p.cl)}</li></ul><a href="${p.u}" target="_blank" rel="noopener">${t(U.visit)} →</a></div></article>`}
 function go(e){setTimeout(()=>self.prep&&prep());if(e)e.preventDefault();
