@@ -29,15 +29,21 @@ small,footer{color:var(--mu)}footer{padding:24px;text-align:center;font-size:.85
 .bd{background:#f5a62326;color:#b36b00}@media(prefers-color-scheme:dark){.bd{color:#ffc266}}
 .ps{display:none}@media print{.ps{display:block;font-weight:700}.c{box-shadow:none;break-inside:avoid}}
 @media(max-width:600px){.st{grid-template-columns:1fr}}
+.tp{display:flex;justify-content:space-between;align-items:center}header{display:block;padding:24px 22px 40px}header h1{font-size:2.1rem;line-height:1.15;margin:34px 0 8px}header p{max-width:560px;margin:0 0 14px;opacity:.95}html{scroll-behavior:smooth}
+.bt{display:inline-block;background:#fff;color:#0b3fa8;padding:12px 22px;border-radius:999px;font-weight:700;text-decoration:none;margin:4px 10px 4px 0}.bt.g{background:#ffffff26;color:#fff;border:1px solid #fff9}
+.fl{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:10px}.fl input{padding:10px;border-radius:10px;border:1px solid var(--bd);background:var(--card);color:var(--fg);font-size:1rem}
+.pr.s{background:transparent;color:var(--ac);border:1px solid var(--ac);margin-left:8px}.dis{margin:8px 0}
+@media(max-width:600px){.fl{grid-template-columns:1fr 1fr}.fl input{grid-column:1/-1}header h1{font-size:1.7rem}}
+@media print{header,#dir,.fl,#cnt,#dl{display:none}}
 </style></head><body>
-<header><h1 data-k="title"></h1><button id="lg">EN</button></header>
+<header><div class="tp"><b data-k="title"></b><button id="lg">EN</button></div><h1 data-k="hh"></h1><p data-k="hs"></p><p><a class="bt" href="#f" data-k="b1"></a><a class="bt g" href="#dir" data-k="b2"></a></p></header>
 <main><ol class="st"><li data-k="s1"></li><li data-k="s2"></li><li data-k="s3"></li></ol>
 <form id="f"><label><span data-k="age"></span><select id="age"></select></label>
 <label><span data-k="grade"></span><select id="grade"></select></label>
 <label><span data-k="major"></span><select id="major"></select></label>
 <fieldset><legend data-k="types"></legend><div id="types"></div></fieldset>
 <label class="o"><input type="checkbox" id="fund"><span data-k="fund"></span></label><br><button data-k="go"></button></form>
-<div id="out"></div><div id="prep"></div></main><footer data-k="foot"></footer>
+<div id="out"></div><div id="prep"></div><h2 id="dir" data-k="dh"></h2><div class="fl"><input id="q" type="search"><select id="ft"></select><select id="ff"></select><select id="fc"></select></div><p><small id="cnt"></small></p><div id="dl"></div></main><footer data-k="foot"></footer>
 <script>
 let L=0;const $=s=>document.querySelector(s),t=a=>a[L];
 const U={title:['Peluang Belajar & Kerja ke Luar Negeri','Study & Work Abroad Opportunities'],
@@ -47,7 +53,7 @@ fund:['Saya butuh program yang didanai','I need a funded program'],go:['Tampilka
 now:['Cocok untuk sekarang','Good fit right now'],later:['Rencanakan untuk nanti','Plan for later'],none:['Belum ada yang cocok. Coba ubah pilihanmu.','No matches yet. Try changing your choices.'],
 loc:['Lokasi','Location'],fl:['Pendanaan','Funding'],dur:['Durasi','Duration'],op:['Pendaftaran dibuka','Applications open'],cl:['Pendaftaran ditutup','Applications close'],
 chk:['Cek situs resmi','Check official site'],visit:['Kunjungi situs program','Visit program website'],print:['Cetak / simpan PDF','Print / save PDF'],
-prep:['Persiapan: yang bisa kamu lakukan sekarang','Get ready: what you can do now'],prepi:['Centang yang sudah kamu kerjakan. Daftar ini tersimpan di perangkatmu.','Tick what you’ve done. This list is saved on your device.'],yt:['Video tutorial','Tutorial videos'],web:['Situs resmi','Official site'],s1:['Isi usia, kelas, dan jurusanmu.','Enter your age, grade and major.'],s2:['Lihat program yang paling cocok, diurutkan untukmu.','See the programs that fit you best, ranked.'],s3:['Centang langkah persiapan dan kunjungi situs resmi.','Tick off the preparation steps and visit the official sites.'],cs:['Sudah ditutup','Closed'],ci:['Ditutup dalam','Closes in'],hari:['hari','days'],co:['Ditutup','Closes'],oo:['Dibuka','Opens'],foot:['Tanggal dan syarat bisa berubah setiap tahun. Selalu cek situs resmi program sebelum mendaftar.','Dates and requirements change every year. Always check the official site before applying.'],
+prep:['Persiapan: yang bisa kamu lakukan sekarang','Get ready: what you can do now'],prepi:['Centang yang sudah kamu kerjakan. Daftar ini tersimpan di perangkatmu.','Tick what you’ve done. This list is saved on your device.'],yt:['Video tutorial','Tutorial videos'],web:['Situs resmi','Official site'],s1:['Isi usia, kelas, dan jurusanmu.','Enter your age, grade and major.'],s2:['Lihat program yang paling cocok, diurutkan untukmu.','See the programs that fit you best, ranked.'],s3:['Centang langkah persiapan dan kunjungi situs resmi.','Tick off the preparation steps and visit the official sites.'],cs:['Sudah ditutup','Closed'],ci:['Ditutup dalam','Closes in'],hari:['hari','days'],co:['Ditutup','Closes'],oo:['Dibuka','Opens'],foot:['Panduan awal, bukan jaminan kelayakan. Tanggal dan syarat berubah setiap tahun dan belum semuanya diverifikasi. Data dicek terakhir: 9 Nov 2026. Selalu cek situs resmi program sebelum mendaftar.','A starting guide, not a guarantee of eligibility. Dates and requirements change every year and not all have been verified. Data last checked: 9 Nov 2026. Always check the official site before applying.'],hh:['Masa depanmu tanpa batas.','Your future has no limits.'],hs:['Temukan program belajar, magang, dan kerja di luar negeri untuk siswa SMK Wisudha Karya.','Find study, internship and work programs abroad for SMK Wisudha Karya students.'],b1:['Cari peluangku','Find my opportunities'],b2:['Lihat semua program','Browse all programs'],so:['Mulai ulang','Start over'],dh:['Direktori program','Program directory'],sr:['Cari program…','Search programs…'],pg:['program','programs'],fy:['Didanai','Funded'],fp:['Sebagian / bervariasi','Partial / varies'],allt:['Semua jenis','All types'],allf:['Semua pendanaan','All funding'],allc:['Semua negara','All countries'],dc:['Hasil ini panduan awal, bukan jaminan kelayakan. Cek persyaratan dan tenggat resmi.','Results are a starting guide, not a guarantee of eligibility. Check official requirements and deadlines.'],
 F:[['Tidak didanai','Not funded'],['Sebagian / bervariasi','Partial / varies'],['Didanai penuh','Fully funded'],['Layanan gratis','Free service'],['Digaji','Paid']],
 wm:['Sesuai jurusanmu','Fits your major'],wt:['Sesuai minatmu','Matches your interest'],wf:['Didanai','Funded']};
 const M=[['nkn',['NKN – Nautika Kapal Niaga (navigasi & dek)','NKN – Merchant Ship Navigation (deck)']],['tkn',['TKN – Teknika Kapal Niaga (mesin kapal)','TKN – Merchant Ship Engineering (engine room)']],['mesin',['Teknik Mesin (permesinan & manufaktur)','Mechanical Engineering (machining & manufacturing)']],['oto',['Teknik Otomotif (kendaraan ringan)','Automotive Engineering (light vehicles)']],['tei',['Teknik Elektronika (TEI & mekatronika)','Electronics Engineering (industrial electronics & mechatronics)']],['titl',['Teknik Ketenagalistrikan (TITL & smart grid)','Electrical Power Engineering (installation & smart grid)']]];
@@ -60,7 +66,7 @@ k('#grade',[10,11,12].map(a=>`<option>${a}</option>`).join(''));
 k('#major',M.map(m=>`<option value="${m[0]}">${t(m[1])}</option>`).join(''));
 const c=[...document.querySelectorAll('#types input:checked')].map(x=>x.value);
 $('#types').innerHTML=T.map(x=>`<label class="o"><input type="checkbox" value="${x[0]}" ${c.includes(x[0])?'checked':''}><span>${t(x[1])}</span></label>`).join('');
-if($('#out').innerHTML)go();else if(self.prep)prep()}
+if($('#out').innerHTML)go();else if(self.prep)prep();self.dir&&dir()}
 const MO='JanFebMarAprMayJunJulAugSepOctNovDec';
 function nd(s){const m=/(\d{1,2})?\s*([A-Z][a-z]{2})\s*(\d{4})?/.exec(s||'');if(!m)return;const i=MO.indexOf(m[2]);if(i<0||i%3)return;const mo=i/3,n=new Date(),y=n.getFullYear(),f=(yy)=>m[1]?new Date(yy,mo,+m[1]):new Date(yy,mo+1,0);let d=f(+m[3]||y);if(!m[3]&&d<n)d=f(y+1);return d}
 function bd(p){const c=nd(p.cl),o=nd(p.op);let x='';if(c){const k=Math.ceil((c-new Date())/864e5);x=k<0?t(U.cs):k<=45?`${t(U.ci)} ${k} ${t(U.hari)}`:`${t(U.co)} ${p.cl}`}else if(o)x=`${t(U.oo)} ${p.op}`;return x?`<span class="tg bd">${x}</span>`:''}
@@ -79,7 +85,7 @@ if(ty.includes(p.t)){s+=2;r.push(t(U.wt))}
 if(fd&&p.f>1){s+=2;r.push(t(U.wf))}
 (ok?now:later).push([s,p,r])});
 const sec=(h,a)=>a.length?`<h2>${t(h)}</h2>`+a.sort((x,y)=>y[0]-x[0]).map(x=>card(x[1],x[2])).join(''):'';
-$('#out').innerHTML=(now.length+later.length?`<p class="ps">SMK Wisudha Karya · ${t(M.find(m=>m[0]==mj)[1])} · ${t(U.grade)} ${gr}</p>`+sec(U.now,now)+sec(U.later,later)+`<button class="pr" onclick="print()">${t(U.print)}</button>`:`<p>${t(U.none)}</p>`)}
+$('#out').innerHTML=(now.length+later.length?`<p class="ps">SMK Wisudha Karya · ${t(M.find(m=>m[0]==mj)[1])} · ${t(U.grade)} ${gr}</p><p class="dis"><small>${t(U.dc)}</small></p>`+sec(U.now,now)+sec(U.later,later)+`<button class="pr" onclick="print()">${t(U.print)}</button><button class="pr s" onclick="reset()">${t(U.so)}</button>`:`<p>${t(U.none)}</p>`)}
 $('#f').onsubmit=go;$('#lg').onclick=()=>{L=1-L;fill()};fill();
 </script><script src="programs.js"></script>
 <script src="resources.js"></script><script>
@@ -88,4 +94,13 @@ function prep(){const ty=[...document.querySelectorAll('#types input:checked')].
 const a=RES.filter(r=>(!r.for||!ty.length||r.for.some(x=>ty.includes(x)))&&(!r.m||r.m.includes(mj)));
 $('#prep').innerHTML=`<h2>${t(U.prep)}</h2><p><small>${t(U.prepi)}</small></p>`+a.map(r=>`<article class="c rs"><input type="checkbox" class="ck" data-id="${r.id}" ${d[r.id]?'checked':''}><div><h3>${t(r.n)}</h3><p>${t(r.s)}</p><p>${r.l.map(l=>l[0]=='yt'?`<a href="https://www.youtube.com/results?search_query=${encodeURIComponent(t(l[1]))}" target="_blank" rel="noopener">▶ ${t(U.yt)}</a>`:`<a href="${l[1]}" target="_blank" rel="noopener">${lab(l[2]||U.web)} →</a>`).join(' · ')}</p></div></article>`).join('');
 document.querySelectorAll('#prep input').forEach(i=>i.onchange=()=>{d[i.dataset.id]=i.checked;try{localStorage.d=JSON.stringify(d)}catch(e){}})}
+let dL=-1;
+function dir(){const ob=(id,o)=>{const p=$(id).value;$(id).innerHTML=o.map(x=>`<option value="${x[0]}">${x[1]}</option>`).join('');$(id).value=p||o[0][0]};
+if(dL!=L){dL=L;ob('#ft',[['',t(U.allt)],...T.map(x=>[x[0],t(x[1])])]);ob('#ff',[['',t(U.allf)],['y',t(U.fy)],['p',t(U.fp)]]);
+ob('#fc',[['',t(U.allc)],...[...new Map(PROGRAMS.map(p=>[p.loc[1],p.loc])).values()].map(c=>[c[1],t(c)])]);$('#q').placeholder=t(U.sr)}
+const q=$('#q').value.toLowerCase(),ft=$('#ft').value,ff=$('#ff').value,fc=$('#fc').value;
+const a=PROGRAMS.filter(p=>(!ft||p.t==ft)&&(!fc||p.loc[1]==fc)&&(!ff||(ff=='y'?p.f>1:p.f<2))&&(!q||(p.n+' '+t(p.s)+' '+t(p.loc)).toLowerCase().includes(q)));
+$('#cnt').textContent=a.length+' '+t(U.pg);$('#dl').innerHTML=a.map(p=>card(p,[])).join('')}
+function reset(){$('#out').innerHTML='';document.querySelectorAll('#types input').forEach(i=>i.checked=false);$('#fund').checked=false;prep();scrollTo({top:0,behavior:'smooth'})}
+$('#q').oninput=dir;['#ft','#ff','#fc'].forEach(s=>$(s).onchange=dir);
 $('#f').addEventListener('change',()=>prep());fill();</script></body></html>
